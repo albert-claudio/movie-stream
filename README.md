@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Cinema 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+<hr/>
+Bem-vindo ao Cinema, uma landing page moderna e intuitiva que permite aos usuários explorar trailers de filmes e acessar um blog atualizado sobre o mundo do cinema. Desenvolvido com as tecnologias mais recentes, o Cinema oferece uma experiência visual agradável e informativa para os amantes da sétima arte.
 
-### `npm start`
+## Recursos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Interface de Usuário Intuitiva**: Interface elegante e fácil de usar, inspirada nas plataformas de streaming mais populares.
+- **Trailers de Filmes**: Ao clicar em um título de filme, o usuário é direcionado ao trailer, permitindo que ele tenha uma prévia antes de decidir assistir em outra plataforma.
+- **Blog Integrado**: Uma seção de blog na página principal, alimentada por uma API externa, que fornece artigos e notícias atualizadas sobre filmes, atores, lançamentos e muito mais.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Futuras Atualizações
 
-### `npm test`
+- **Sistema de Recomendação**: Implementação de um algoritmo para recomendar trailers baseados no histórico de visualizações do usuário.
+- **Comentários e Avaliações**: Permitir que os usuários deixem comentários e avaliações sobre os trailers.
+- **Pesquisa Avançada**: Melhorar a funcionalidade de pesquisa para incluir filtros por gênero, ano de lançamento e mais.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tecnologias
 
-### `npm run build`
+- **Frontend**: React 
+- **Estilização**: CSS Modules ou Styled Components (Sugestão - ajuste conforme seu projeto)
+- **API de Trailers**: YouTube API
+- **API de Blog**: Integração com API externa
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Começando
+Siga estas instruções para obter uma cópia do projeto rodando no seu sistema local para fins de desenvolvimento e teste.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Pré-requisitos
+- Node.js
+- npm ou yarn
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ### Instalação
 
-### `npm run eject`
+1. Clone o repositório
+ ```sh
+git clone https://github.com/albert-claudio/movie-stream.git
+````
+2. instale os pacotes NPM necessários
+```sh
+npm install
+```
+ou
+```
+yarn install
+```
+3.Em um novo terminal, inicie o cliente frontend:
+```
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contribuindo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contribuições são muito bem-vindas, seja melhorando a documentação, reportando bugs, ou sugerindo novas features. Sinta-se à vontade para abrir um issue ou enviar um pull request.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1.Faça o Fork do projeto<br/>
+2.Crie sua Feature Branch (git checkout -b feature/NewFeature) <br/>
+3.Commit suas mudanças (git commit -m 'Add some NewFeature') <br/>
+4.Push para a Branch (git push origin feature/NewFeature) <br/>
+5.Abra um Pull Request <br/>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Licença
 
-## Learn More
+Este projeto está licenciado sob a [MIT License](LICENSE).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Cinema** - A sua plataforma para descobrir novos filmes através de trailers e manter-se atualizado com as últimas notícias do mundo cinematográfico.
