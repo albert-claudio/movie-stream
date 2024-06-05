@@ -1,9 +1,16 @@
 import React, {useState, useEffect} from 'react'
 import './Banner.css'
 import bgImg from '../Images/bg-transformer.jpg'
+import MovieContent from '../Components/MovieContent'
+import MovieDate from '../Components/MovieDate'
+import PlayButton from '../Components/PlayButton'
+import MovieSwiper from '../Components/MovieSwiper'
+
+
 
 function Banner() {
     const [movies, setMovies] = useState([])
+    
 
     const fecthData = ()=>(
         fetch('http://localhost:3000/data/movieData.json')
@@ -16,39 +23,45 @@ function Banner() {
         fecthData()
     },[])
 
+    const handleSlideChange = id =>{
+        const newMovies = movies.map(movie=>{
+            movie.active = false
+            if(movie._id===id){
+                movie.active = true
+            }
+            return movie
+        })
+            setMovies(newMovies)
+    }
+
   return (
     <div className="banner">
-        <div className="movie">
-            <img src={bgImg} alt="Background Image" className="bgImg active" />
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-lg-6 col-md-12">
-                        <div className="content active">
-                            <img src="" alt="Movie Title" className="movie-title" />
-                            <h4>
-                            <span>Year</span>
-                            <span><i>age</i></span>
-                            <span>length</span>
-                            <span>category</span>
-                            </h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus quae, 
-                                ad, explicabo incidunt molestiae illo distinctio veritatis in, 
-                                facilis autem deleniti quos? Recusandae veritatis nobis delectus ut, 
-                                neque exercitationem saepe?</p>
-                                <div className="button">Button</div>
+        {
+            movies && movies.length>0 && movies.map(movie=>(
+                <div className="movie">
+                <img src={movie.bgImg} alt="Background Image" className={`bgImg ${movie.active ? 'active' : undefined}`} />
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-lg-6 col-md-12">
+                            <MovieContent movie={movie}/>
+                        </div>
+                        <div className="col-lg-6 col-md-12">
+                            <MovieDate movie={movie}/>
+                            <PlayButton movie={movie}/>
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-12">
-                        <div className="date">
-                            <h2>On 15th August</h2>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-        </div>
+            ))
+        }
+        
+        {
+            movies && movies.length>0 && (
+            <MovieSwiper slides={movies} slideChange={handleSlideChange}/>
+        )
+        }
     </div>
   )
 }
 
-export default Banner
+export default Banner;
